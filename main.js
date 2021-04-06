@@ -17,7 +17,7 @@ const connect = () => {
     // 'Nefry'というデバイス名でフィルタリング
     acceptAllDevices: false,
     filters: [
-      {namePrefix: 'Nefry'}
+      {namePrefix: 'Up'}
     ],
     optionalServices: [
       // 使用したいServiceを登録しておく
@@ -55,6 +55,10 @@ const setNotifications = (characteristic) => {
     if (textX) textX.innerHTML = z[0]
     if (textY) textY.innerHTML = z[1]
     if (textZ) textZ.innerHTML = z[2]
+    if (textTemperature) textTemperature.innerHTML = z[3]
+    if (textHumidity) textHumidity.innerHTML = z[4]
+    if (textGas) textGas.innerHTML = z[5]
+    if (textPressure) textPressure.innerHTML = z[6] * 10
   })
 
   // Notifications開始
