@@ -55,10 +55,12 @@ const setNotifications = (characteristic) => {
     if (textX) textX.innerHTML = z[0]
     if (textY) textY.innerHTML = z[1]
     if (textZ) textZ.innerHTML = z[2]
-    if (textTemperature) textTemperature.innerHTML = z[3]
-    if (textHumidity) textHumidity.innerHTML = z[4]
-    if (textGas) textGas.innerHTML = z[5]
-    if (textPressure) textPressure.innerHTML = z[6] * 10
+    if (textTemperature) textTemperature.innerHTML = String(z[3]) + " Celsius"
+    if (textHumidity) textHumidity.innerHTML = String(z[4]) + " %"
+    if (textGas) textGas.innerHTML = String(z[5]) + " kOhms"
+    if (textPressure) textPressure.innerHTML = String(z[6] * 10) + " hPa"
+    if (textAmbientTemp) textAmbientTemp.innerHTML = String(z[7]) + " Celsius"
+    if (textObjectTemp) textObjectTemp.innerHTML = String(z[8]) + " Celsius"
   })
 
   // Notifications開始
