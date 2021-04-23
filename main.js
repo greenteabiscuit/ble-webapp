@@ -14,7 +14,7 @@ btn.addEventListener('click', (event) => {
 const connect = () => {
   // Scan
   navigator.bluetooth.requestDevice({
-    // 'Nefry'というデバイス名でフィルタリング
+    // 'Up'というデバイス名でフィルタリング
     acceptAllDevices: false,
     filters: [
       {namePrefix: 'Up'}
@@ -55,6 +55,7 @@ const setNotifications = (characteristic) => {
     if (textX) textX.innerHTML = z[0]
     if (textY) textY.innerHTML = z[1]
     if (textZ) textZ.innerHTML = z[2]
+    if (stepcount) stepcount.innerHTML = z[9]
     if (textTemperature) textTemperature.innerHTML = String(z[3]) + " Celsius"
     if (textHumidity) textHumidity.innerHTML = String(z[4]) + " %"
     if (textGas) textGas.innerHTML = String(z[5]) + " kOhms"
